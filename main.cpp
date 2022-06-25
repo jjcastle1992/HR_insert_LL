@@ -120,7 +120,7 @@ SinglyLinkedListNode* insertNodeAtPosition(SinglyLinkedListNode* head, int data,
             //To insert new node
             //Neighbor to the left need to point to new node
             //Neighbor's -> next needs to be added to our new node's next.
-            newNode->next = iterator->next->next;
+            newNode->next = iterator->next;
             iterator->next = newNode;
         }
     }
