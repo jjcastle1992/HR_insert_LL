@@ -87,9 +87,11 @@ SinglyLinkedListNode* insertNodeAtPosition(SinglyLinkedListNode* head, int data,
         //Could solve by checking the current size (O(N)).
     while (iterator) {
         linkedListSize++;
-        iterator->next;
+        if (iterator->next == nullptr) {
+            tail = iterator;
+        }
+        iterator = iterator->next;
     }
-    tail = iterator;
 
     //Check to see if position is viable
     if (position <= linkedListSize) {
@@ -113,7 +115,7 @@ SinglyLinkedListNode* insertNodeAtPosition(SinglyLinkedListNode* head, int data,
             iterator = head;
             //Traverse LL until at 1 to the left of the desired insertion position
             for (int i = 0; i < (position-1); i++) {
-                iterator->next;
+                iterator = iterator->next;
             }
             //To insert new node
             //Neighbor to the left need to point to new node
