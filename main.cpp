@@ -77,8 +77,41 @@ void free_singly_linked_list(SinglyLinkedListNode* node) {
  *
  */
 
-SinglyLinkedListNode* insertNodeAtPosition(SinglyLinkedListNode* llist, int data, int position) {
+SinglyLinkedListNode* insertNodeAtPosition(SinglyLinkedListNode* head, int data, int position) {
+    //Passing in head pointer, payload, and position of payload (where 0 = head, and 1 is 1 unit away from head)
+    SinglyLinkedListNode *iterator = head;
+    int linkedListSize = 0;
+    //Edge case, position is outside the range of the linkedList...
+        //Could solve by checking the current size (O(N)).
+    while (iterator) {
+        linkedListSize++;
+        iterator->next;
+    }
 
+    //Check to see if position is viable
+    if (position <= linkedListSize) {
+        //traverse n times to get to position
+        //Check if head, mid, or tail case
+        //Head Case
+        if (position == 0) {
+
+        }
+        //Tail Case
+        else if (position == linkedListSize) {
+
+        }
+        //Mid Case
+        else {
+
+        }
+    }
+
+
+    else {
+        std::cout << "ERROR: Position not valid" << std::endl;
+    }
+    //Return head
+    return head;
 }
 
 int main()
